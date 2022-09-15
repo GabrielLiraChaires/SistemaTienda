@@ -55,6 +55,16 @@ namespace SistemaTiendaG
             var idProducto = dgvProductos.CurrentRow.Cells["idproducto"].Value;
             _productoManejador.EliminarProductos(Convert.ToInt32(idProducto));
         }
+        private void ModificarProducto()
+        {
+            _productoManejador.ModificarProductos(new Productos
+            {
+                Idproducto = Convert.ToInt32(txtIDProducto.Text),
+                Nombre = txtNombre.Text,
+                Descripcion=txtDescripcion.Text,
+                Precio = Convert.ToDouble(txtPrecio.Text)
+            });
+        }
         //Metodos del formulario.
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -74,9 +84,9 @@ namespace SistemaTiendaG
                 }
                 else
                 {
-                    /*ModificarProducto();
+                    ModificarProducto();
                     LLenarProductos("");
-                    MessageBox.Show("Se actualizó correctamente");*/
+                    MessageBox.Show("Se actualizó correctamente");
                 }
                 LimpiarCampos();
                 ControlarCampos(false);
