@@ -79,5 +79,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades.SistemaTiendaG\Entidades.SistemaTiendaG.csproj">
+      <Project>{7a4b7915-094a-47d6-b5c0-09f0dfbc83fa}</Project>
+      <Name>Entidades.SistemaTiendaG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaNegocio.SistemaTiendaG\LogicaNegocio.SistemaTiendaG.csproj">
+      <Project>{c7f5497b-7567-472b-b8b5-509cf46024ff}</Project>
+      <Name>LogicaNegocio.SistemaTiendaG</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
