@@ -50,6 +50,11 @@ namespace SistemaTiendaG
 
             _productoManejador.GuardarProductos(producto);
         }
+        private void EliminarProducto()
+        {
+            var idProducto = dgvProductos.CurrentRow.Cells["idproducto"].Value;
+            _productoManejador.EliminarProductos(Convert.ToInt32(idProducto));
+        }
         //Metodos del formulario.
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -115,6 +120,23 @@ namespace SistemaTiendaG
             ControlarBotones(true, false, false, true, true);
             LimpiarCampos();
             ControlarCampos(false);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Deseas eliminar este registro?", "ELIMINAR PRODUCTO", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    EliminarProducto();
+                    LLenarProductos("");
+                    MessageBox.Show("El registro se elimino correctamente");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Ocurrio un error al intentar eliminar:(");
+                }
+            }
         }
     }
 }
