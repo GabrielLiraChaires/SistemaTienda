@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\Sistema\AccesoDatos.Sistema\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +47,12 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="ProductoAccesoDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades.SistemaTiendaG\Entidades.SistemaTiendaG.csproj">
+      <Project>{7a4b7915-094a-47d6-b5c0-09f0dfbc83fa}</Project>
+      <Name>Entidades.SistemaTiendaG</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
