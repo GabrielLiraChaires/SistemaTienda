@@ -44,5 +44,15 @@
     <Compile Include="ProductosManejador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos.SistemaTiendaG\AccesoDatos.SistemaTiendaG.csproj">
+      <Project>{65d129a2-dc3d-4329-a4e9-c7e9ce7df294}</Project>
+      <Name>AccesoDatos.SistemaTiendaG</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades.SistemaTiendaG\Entidades.SistemaTiendaG.csproj">
+      <Project>{7a4b7915-094a-47d6-b5c0-09f0dfbc83fa}</Project>
+      <Name>Entidades.SistemaTiendaG</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
