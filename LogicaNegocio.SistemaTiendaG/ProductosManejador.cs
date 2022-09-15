@@ -19,5 +19,9 @@ namespace LogicaNegocio.SistemaTiendaG
         {
             _productosAccesoDatos.EliminarProductos(idProducto);
         }
+        public void ModificarProductos(Productos producto)
+        {
+            _productosAccesoDatos.ModificarProductos(producto);
+        }
     }
 }

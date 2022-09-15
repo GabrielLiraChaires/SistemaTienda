@@ -21,7 +21,12 @@ namespace AccesoDatos.SistemaTiendaG
             string consulta = string.Format("Delete from producto where idproducto={0}", idProducto);
             con.EjecutarConsulta(consulta);
         }
+        public void ModificarProductos(Productos producto)
+        {
 
+            string consulta = string.Format("update producto set nombre='{0}', descripcion='{1}', precio={2} where idproducto = {3}", producto.Nombre, producto.Descripcion, producto.Precio, producto.Idproducto);
+            con.EjecutarConsulta(consulta);
+        }
         public List<Productos> GetProductos(string dato)
         {
             var listProductos = new List<Productos>();
